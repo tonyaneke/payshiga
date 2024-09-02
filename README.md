@@ -1,50 +1,32 @@
-# Welcome to your Expo app 👋
+# My React Native Project
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
 
-## Get started
+This project is a mobile application built with **React Native**, **TypeScript**, **Expo**, **NativeWind**, and **Zustand**. It is designed to provide a smooth and efficient experience with a clean codebase and modular structure.
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- **React Native & Expo**: Leveraging the power of React Native for cross-platform development, and Expo for an easy and quick setup.
+- **TypeScript**: Strongly-typed codebase ensuring fewer runtime errors and better development experience.
+- **NativeWind**: Utility-first styling framework to style your components efficiently.
+- **Zustand**: Lightweight state management for managing global state with ease.
 
-2. Start the app
+## Table of Contents
 
-   ```bash
-    npx expo start
-   ```
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [Project Structure](#project-structure)
+- [State Management](#state-management)
+- [Styling](#styling)
+- [Contributing](#contributing)
+- [License](#license)
 
-In the output, you'll find options to open the app in a
+## Installation
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+To get started with this project, clone the repository and install the dependencies:
 
 ```bash
-npm run reset-project
+git clone https://github.com/yourusername/your-repository.git
+cd your-repository
+npm install
 ```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
