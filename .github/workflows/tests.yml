@@ -3,10 +3,10 @@ name: Run Tests
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - "main"
+    pull_request:
+      branches:
+        - "main"
 
 jobs:
   test:
@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "20.x"
+          node-version: "18"
 
       - name: Install Dependencies
         run: npm install
