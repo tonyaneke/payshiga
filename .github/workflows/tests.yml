@@ -3,22 +3,26 @@ name: Run Tests
 on:
   push:
     branches:
-      - "main"
-    pull_requests:
-      branches:
-        - "main"
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/checkout@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 20.10.0
+          node-version: "20.x"
+
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
