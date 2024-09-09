@@ -1,4 +1,4 @@
-name: "Go now"
+name: Hello World
 
 on:
   push:
@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      name: Hello Payshiga
-      run: echo Hello Tony
+      - name: Hello Step
+        run: echo "Hello Tony"
