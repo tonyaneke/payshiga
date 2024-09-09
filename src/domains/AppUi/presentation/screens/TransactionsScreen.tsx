@@ -7,12 +7,14 @@ import TransactionCard from "../components/molecules/Cards/TransactionCard";
 import { Transaction } from "@/src/shared/contants/types";
 import { transactions } from "@/src/shared/contants/data";
 import SearchBar from "../components/molecules/TextInputs/SearchBar";
+import useStore, { UserState } from "@/src/core/application/state/store";
 
 export default function TransactionsScreen() {
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState<string>("");
+  // const transactions = useStore((state: UserState) => state.transactions);
   const [filteredTransactions, setFilteredTransactions] =
-    useState<Transaction[]>(transactions);
+    useState<any[]>(transactions);
 
   const handleSearch = (text: string) => {
     setQuery(text);

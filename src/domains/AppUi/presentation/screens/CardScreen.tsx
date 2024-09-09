@@ -9,14 +9,24 @@ import ActionBtn from "@/src/shared/components/atoms/Buttons/ActionBtn";
 import CardActions from "../components/molecules/sections/CardActions";
 import { router } from "expo-router";
 import useStore from "@/src/core/application/state/store";
+import { formatBalance } from "@/src/shared/utils/tools";
 
 export default function CardScreen() {
-  const { card, withdrawFromCard, getPrimaryAccount, freezeCard } = useStore();
+  const {
+    card,
+    withdrawFromCard,
+    getPrimaryAccount,
+    freezeCard,
+    getTransactions,
+  } = useStore();
   const { currency } = getPrimaryAccount();
   console.log("CardActions", card);
   const topup = () => {
     router.push("/overlays");
   };
+
+  const tx = getTransactions();
+  console.log("tx", tx);
 
   return (
     <View className="flex-1 bg-primary-background">
@@ -27,7 +37,7 @@ export default function CardScreen() {
             className={`font-bold text-4xl text-white ${
               freezeCard ? "line-through" : ""
             }`}
-          >{`$${card.balance}`}</Text>
+          >{`$${formatBalance(card.balance)}`}</Text>
           <Body text="Available to spend" />
           <CreditCard />
           <View
